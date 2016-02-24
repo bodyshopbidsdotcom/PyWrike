@@ -5,8 +5,6 @@ class Wrike(OAuth2Gateway):
   def __init__(self, data_filepath=None, auth_info=None, wait_for_redirect=False):
     OAuth2Gateway.__init__(self, data_filepath=data_filepath, auth_info=auth_info)
     self._host_url = 'https://www.wrike.com/api/v3'
-    self._common_params = {}
-    self._common_headers = {}
     self._oauth2_url = 'https://www.wrike.com/oauth2/token'
     self._oauth2_authorization_url = 'https://www.wrike.com/oauth2/authorize'
     self._oauth2_client_id = os.environ['WRIKE_CLIENT_ID']

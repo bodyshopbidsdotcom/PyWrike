@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-CURRENT_VERSION = '0.2'
+CURRENT_VERSION = '0.3'
 
 setup(
   name = 'PyWrike',
@@ -13,7 +13,7 @@ setup(
   download_url = 'https://github.com/bodyshopbidsdotcom/PyWrike/tarball/%s' % CURRENT_VERSION,
   keywords = ['api', 'gateway', 'http', 'REST'],
   install_requires = [
-    'basegateway==0.9'
+    'basegateway==0.11'
   ],
   classifiers = [
     "Topic :: Internet :: WWW/HTTP",

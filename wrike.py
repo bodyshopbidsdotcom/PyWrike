@@ -2,13 +2,13 @@ from oauth2gateway import OAuth2Gateway
 import os
 
 class Wrike(OAuth2Gateway):
-  def __init__(self, data_filepath=None, auth_info=None, wait_for_redirect=False, tokens_updater=None):
+  def __init__(self, data_filepath=None, auth_info=None, wait_for_redirect=False, tokens_updater=None, client_id=None, client_secret=None):
     OAuth2Gateway.__init__(self, data_filepath=data_filepath, auth_info=auth_info, tokens_updater=tokens_updater)
     self._host_url = 'https://www.wrike.com/api/v3'
     self._oauth2_url = 'https://www.wrike.com/oauth2/token'
     self._oauth2_authorization_url = 'https://www.wrike.com/oauth2/authorize'
-    self._oauth2_client_id = os.environ['WRIKE_CLIENT_ID']
-    self._oauth2_client_secret = os.environ['WRIKE_CLIENT_SECRET']
+    self._oauth2_client_id = client_id or os.environ.get('WRIKE_CLIENT_ID')
+    self._oauth2_client_secret = client_secret or os.environ.get('WRIKE_CLIENT_SECRET')
     self._wait_for_redirect = wait_for_redirect == True
     self._api = {
       'get_task': {

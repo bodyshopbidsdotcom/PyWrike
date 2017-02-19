@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-CURRENT_VERSION = '0.4'
+CURRENT_VERSION = '0.5'
 
 setup(
   name = 'PyWrike',

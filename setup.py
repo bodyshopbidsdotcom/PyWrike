@@ -13,7 +13,7 @@ setup(
   download_url = 'https://github.com/bodyshopbidsdotcom/PyWrike/tarball/%s' % CURRENT_VERSION,
   keywords = ['api', 'gateway', 'http', 'REST'],
   install_requires = [
-    'basegateway==0.13'
+    'basegateway>=0,<1'
   ],
   classifiers = [
     "Topic :: Internet :: WWW/HTTP",
